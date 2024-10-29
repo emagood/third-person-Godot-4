@@ -1,34 +1,44 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://tykcwr43cbsh"]
 
-[ext_resource path="res://player/ControllableCamera.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://player/ControllableCamera.gd" id="1"]
 
-[sub_resource type="BoxShape3D" id=1]
-extents = Vector3( 1, 0.5, 0.5 )
+[sub_resource type="SphereShape3D" id="SphereShape3D_yingw"]
+radius = 0.7
+
+[sub_resource type="BoxShape3D" id="1"]
+size = Vector3(2, 1, 1)
 
 [node name="ControllableCamera" type="Node3D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
+current_camera = false
 
 [node name="GimbalH" type="Node3D" parent="."]
 
 [node name="GimbalV" type="Node3D" parent="GimbalH"]
 
-[node name="Camera3D" type="Camera3D" parent="GimbalH/GimbalV"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
-current = true
-collision_mask = 5
+[node name="SpringArm3D" type="SpringArm3D" parent="GimbalH/GimbalV"]
+collision_mask = 3
+shape = SubResource("SphereShape3D_yingw")
+spring_length = 2.0
+margin = 0.5
 
-[node name="WaterDetector" type="Area3D" parent="GimbalH/GimbalV/Camera3D"]
+[node name="Camera3D" type="Camera3D" parent="GimbalH/GimbalV/SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+current = true
+
+[node name="WaterDetector" type="Area3D" parent="GimbalH/GimbalV/SpringArm3D/Camera3D"]
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="GimbalH/GimbalV/Camera3D/WaterDetector"]
-shape = SubResource( 1 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GimbalH/GimbalV/SpringArm3D/Camera3D/WaterDetector"]
+shape = SubResource("1")
 
 [node name="UnderwaterEffect" type="ColorRect" parent="."]
 visible = false
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0431373, 0.572549, 1, 0.423529 )
+color = Color(0.0431373, 0.572549, 1, 0.423529)
 
-[connection signal="area_entered" from="GimbalH/GimbalV/Camera3D/WaterDetector" to="." method="_on_WaterDetector_area_entered"]
-[connection signal="area_exited" from="GimbalH/GimbalV/Camera3D/WaterDetector" to="." method="_on_WaterDetector_area_exited"]
+[connection signal="area_entered" from="GimbalH/GimbalV/SpringArm3D/Camera3D/WaterDetector" to="." method="_on_WaterDetector_area_entered"]
+[connection signal="area_exited" from="GimbalH/GimbalV/SpringArm3D/Camera3D/WaterDetector" to="." method="_on_WaterDetector_area_exited"]

@@ -5,7 +5,7 @@ class_name Player
 signal movement_state_changed(new_state)
 
 @export var max_slope_angle: float = 50
-
+@export var name_player : String = "ema"
 @onready var skin: Node3D = $Skin
 @onready var camera: ControllableCamera = $CamRoot/ControllableCamera
 @onready var controls: Controls = $Controls
@@ -24,6 +24,8 @@ var move_rot: float = 0
 
 func _ready():
 	# watch for changes in the movement state
+	if Data.camera == false:
+		camera.current_camera = true
 	sm_movement.connect("transitioned", self._on_move_state_changed)
 
 func _physics_process(delta):
