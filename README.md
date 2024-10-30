@@ -56,6 +56,7 @@ Each button displays an icon that (hopefully) explains the action that they perf
 ## Changes
 
 Changes to touch buttons
+
 Fixed the broken menu and player scenes in the Godot 4.3 version
 
 ## License
