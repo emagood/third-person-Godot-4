@@ -3,7 +3,7 @@ A third person player controller with touchscreen support for Godot 4.
 
 > **Note:** This project is for Godot 4 only. For the Godot 3 version please see [selgesel/godot3-third-person-controller](https://github.com/selgesel/godot3-third-person-controller)
 
-This is a supplementary code repository from selgesel on which this project is based [YouTube video series](https://www.youtube.com/playlist?list=PLlT0CCZ8Yw0mcxG_D_sSA-Imnc5tiR4tx).
+This is a repository of complementary code from selgesel, on which this project is based. [YouTube video series](https://www.youtube.com/playlist?list=PLlT0CCZ8Yw0mcxG_D_sSA-Imnc5tiR4tx).
 
 ![Preview](./preview.gif?v=1)
 
