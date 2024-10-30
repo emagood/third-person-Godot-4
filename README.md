@@ -44,6 +44,7 @@ In touchscreen devices some actions are performed through gestures, and some are
 
 Each button displays an icon that (hopefully) explains the action that they perform, and they also appear or disappear based on whether or not they're available.
 
+
 ### Gestures
 | Gesture | Context | Description |
 |---------|---------|-------------|
@@ -51,6 +52,11 @@ Each button displays an icon that (hopefully) explains the action that they perf
 | Drag | Screen | Rotate the camera |
 | Pinch In (Two Fingers) | Screen | Move the camera further away from the player |
 | Pinch Out (Two Fingers) | Screen | Move the camera closer to the player |
+
+## Changes
+
+Changes to touch buttons
+Fixed the broken menu and player scenes in the Godot 4.3 version
 
 ## License
 MIT
