@@ -57,7 +57,10 @@ Each button displays an icon that (hopefully) explains the action that they perf
 
 Changes to touch buttons
 
-Fixed the broken menu and player scenes in the Godot 4.3 version
+Fixed the broken scene and player scenes in the Godot 4.3 version
+
+added a test menu and a settings save,
+Saved depending on the platform
 
 ## License
 MIT
