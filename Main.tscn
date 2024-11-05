@@ -43,6 +43,7 @@ environment = SubResource("2")
 transform = Transform3D(-0.652085, -0.491636, 0.57713, -0.0626096, 0.793559, 0.605263, -0.755556, 0.358549, -0.548249, 0, 2.70409, 0)
 visible = false
 shadow_enabled = true
+directional_shadow_mode = 0
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.994675, -0.00012963, 0.103061, -0.0102448, 0.994922, 0.100128, -0.102551, -0.10065, 0.989623, 4.86381, 2.09194, 14.9505)
@@ -54,7 +55,7 @@ sky_mode = 1
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
-collision_mask = 2
+collision_mask = 3
 
 [node name="CSGMesh3D" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -6, 0)
@@ -104,7 +105,17 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Water"]
 shape = SubResource("8")
 
-[node name="Label" type="Label" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -117,3 +128,10 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "kjhjkjhkjhjkjjjklkj"
+
+[node name="menu" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "menu"
+
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

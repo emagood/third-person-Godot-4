@@ -3,9 +3,7 @@ A third person player controller with touchscreen support for Godot 4.
 
 > **Note:** This project is for Godot 4 only. For the Godot 3 version please see [selgesel/godot3-third-person-controller](https://github.com/selgesel/godot3-third-person-controller)
 
-This is a repository of complementary code from selgesel, on which this project is based.
-Selgesel YouTube Channel
-[YouTube video series](https://www.youtube.com/playlist?list=PLlT0CCZ8Yw0mcxG_D_sSA-Imnc5tiR4tx).
+This is a complementary code repository for my [YouTube video series](https://www.youtube.com/playlist?list=PLlT0CCZ8Yw0mcxG_D_sSA-Imnc5tiR4tx).
 
 ![Preview](./preview.gif?v=1)
 
@@ -44,7 +42,6 @@ In touchscreen devices some actions are performed through gestures, and some are
 
 Each button displays an icon that (hopefully) explains the action that they perform, and they also appear or disappear based on whether or not they're available.
 
-
 ### Gestures
 | Gesture | Context | Description |
 |---------|---------|-------------|
@@ -52,12 +49,6 @@ Each button displays an icon that (hopefully) explains the action that they perf
 | Drag | Screen | Rotate the camera |
 | Pinch In (Two Fingers) | Screen | Move the camera further away from the player |
 | Pinch Out (Two Fingers) | Screen | Move the camera closer to the player |
-
-## Changes
-
-Changes to touch buttons
-
-Fixed the broken menu and player scenes in the Godot 4.3 version
 
 ## License
 MIT

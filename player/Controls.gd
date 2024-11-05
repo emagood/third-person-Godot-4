@@ -31,6 +31,7 @@ func _ready():
 	# so instead we check if the OS name is Android or iOS, and if so, we enable touch controls
 	var os_name := OS.get_name()
 	if os_name == "Android" || os_name == "iOS":
+		Data.es_touch = true
 		_is_touchscreen = true
 
 	# if touchscreen controls are disabled we capture the mouse in the game window
@@ -40,6 +41,7 @@ func _ready():
 	else:
 		# otherwise we just make the mobile controls node visible
 		_mobile_controls.visible = true
+		Data.es_touch = true
 
 func _process(delta):
 	# if the mouse cursor is being captured in the game window
