@@ -20,7 +20,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Data="*res://scriptss/data.gd"
+Data="*res://scripts/data.gd"
 
 [display]
 

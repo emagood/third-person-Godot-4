@@ -32,7 +32,7 @@ func _input(event: InputEvent) -> void:
 
 func _on_menu_pressed() -> void:
 	prints("hola emanuel")
-	var menu = preload("res://tools/config_menu/config_menu.tscn").instantiate()
+	var menu = preload("res://escenas/menu_config/menu_config.tscn").instantiate()
 	add_child(menu)
 	prints("instancio escena")
 	await get_tree().create_timer(3).timeout
