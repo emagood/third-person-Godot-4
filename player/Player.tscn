@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://tykcwr43cbsh" path="res://player/ControllableCamera.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://jmt4y8nkctho" path="res://assets/models/CombatPack.glb" id="2_jydkg"]
 [ext_resource type="PackedScene" uid="uid://e2bccij4j7ud" path="res://player/Controls.tscn" id="3"]
-[ext_resource type="Script" path="res://scripts/StateMachine.gd" id="4"]
+[ext_resource type="Script" path="res://scriptss/StateMachine.gd" id="4"]
 [ext_resource type="Script" path="res://player/states/Stopped.gd" id="5"]
 [ext_resource type="Script" path="res://player/states/Running.gd" id="6"]
 [ext_resource type="Script" path="res://player/states/Jumping.gd" id="7"]
