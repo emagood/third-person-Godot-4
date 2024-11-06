@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dsjey3qg0lfop"]
+
+[node name="state_ema" type="Node3D"]

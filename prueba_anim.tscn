@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3g0q0m70ulno"]
+
+[ext_resource type="PackedScene" uid="uid://c0ylx2snq1ry0" path="res://play_pruebba.tscn" id="1_a0qv5"]
+[ext_resource type="Script" path="res://prueba_anim.gd" id="1_c585m"]
+[ext_resource type="PackedScene" uid="uid://nwctp4h0v80q" path="res://play_5.tscn" id="3_ciev7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_diat0"]
+
+[sub_resource type="Sky" id="Sky_q5067"]
+sky_material = SubResource("ProceduralSkyMaterial_diat0")
+
+[sub_resource type="Environment" id="Environment_w1v1f"]
+background_mode = 2
+sky = SubResource("Sky_q5067")
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_c585m")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_w1v1f")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.533443, 2.41705)
+
+[node name="play" parent="." instance=ExtResource("1_a0qv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105716, 0, 0)
+
+[node name="play5" parent="." instance=ExtResource("3_ciev7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.807534, 0, -2.40309)
+
+[node name="play6" parent="." instance=ExtResource("3_ciev7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.887158, -0.0144205, -0.946216)
+
+[node name="play7" parent="." instance=ExtResource("3_ciev7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175573, 0, -3.22801)
+
+[node name="play8" parent="." instance=ExtResource("3_ciev7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11641, 0, -2.40309)
+
+[node name="play9" parent="." instance=ExtResource("3_ciev7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.807534, 0, -0.852383)
+
+[node name="play10" parent="." instance=ExtResource("3_ciev7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000249386, 0, -1.52486)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 44.0
+offset_top = 23.0
+offset_right = 163.0
+offset_bottom = 87.0
