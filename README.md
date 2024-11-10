@@ -61,6 +61,6 @@ Fixed the broken scene and player scenes in the Godot 4.3 version
 added a test menu and a settings save,
 Saved depending on the platform
 
->>>>>>> b8a35a88ea7a40949e296bb95c1592eac42b0b39
+>>
 ## License
 MIT
