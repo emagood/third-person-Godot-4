@@ -6,6 +6,13 @@ extends Node3D
 # Called when the node enters  the scene tree for the first time.
 func _ready() -> void:
 	get_tree().set_auto_accept_quit(false)
+	ProjectSettings.set_setting("renderer/rendering_method", "mobile")#Vulkan
+	#ProjectSettings.save()  # Guardar la configuración
+	ProjectSettings.save_custom("user://override.cfg")
+	print(ProjectSettings.get_setting("renderer/rendering_method"))
+	## Luego cargar la escena principal
+	#var main_scene = load("res://ruta/a/tu/escena_principal.tscn")
+	#get_tree().change_scene_to(main_scene)
 	pass # Replace with function body.
 
 
@@ -20,11 +27,15 @@ func _process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if Input.is_key_pressed(KEY_K):
-		prints("hola emanuel")
-		var player = preload("res://player/Player.tscn").instantiate()
-		add_child(player)
-		prints("instancio escena")
-		await get_tree().create_timer(3).timeout
+		ProjectSettings.set_setting("renderer/rendering_method", "mobile")#Vulkan
+	#ProjectSettings.save()  # Guardar la configuración
+		ProjectSettings.save_custom("user://override.cfg")
+		print(ProjectSettings.get_setting("renderer/rendering_method"))
+		#prints("hola emanuel")
+		#var player = preload("res://player/Player.tscn").instantiate()
+		#add_child(player)
+		#prints("instancio escena")
+		#await get_tree().create_timer(3).timeout
 
 
 
@@ -55,3 +66,15 @@ func _notification(what):
 		prints("instancio escena")
 		await get_tree().create_timer(3).timeout
 		prints("quit")
+
+
+
+	# Cambiar configuración de renderizado
+
+
+
+func _on_timer_timeout() -> void:
+	
+	
+	#var pid = OS.create_process(OS.get_executable_path(), ["--rendering-driver opengl3"])
+	pass # Replace with function body.

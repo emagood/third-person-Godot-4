@@ -134,4 +134,9 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "menu"
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -14,12 +14,13 @@ config/name="Third Person"
 run/main_scene="res://Main.tscn"
 config/auto_accept_quit=false
 config/quit_on_go_back=false
-config/features=PackedStringArray("4.4")
+config/features=PackedStringArray("4.3")
 run/max_fps=1000
 config/icon="res://icon.png"
 
 [autoload]
 
+Config="*res://config.gd"
 Data="*res://scripts/data.gd"
 
 [display]
@@ -119,8 +120,10 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 renderer/rendering_method="mobile"
+driver/threads/thread_model=2
 textures/vram_compression/import_etc2_astc=true
 lights_and_shadows/directional_shadow/size=2048
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
 environment/default_environment="res://default_env.tres"
+driver/driver_name="Vulkan"

@@ -1,2 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
+tppc.console.exe
+tppc.exe
+tppc.apk
