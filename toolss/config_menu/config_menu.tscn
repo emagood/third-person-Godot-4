@@ -201,7 +201,6 @@ size_flags_horizontal = 3
 selected = 0
 item_count = 8
 popup/item_0/text = "648×648 (1:1)"
-popup/item_0/id = 0
 popup/item_1/text = "640×480 (4:3)"
 popup/item_1/id = 1
 popup/item_2/text = "720×480 (3:2)"
@@ -231,7 +230,6 @@ size_flags_horizontal = 3
 selected = 1
 item_count = 3
 popup/item_0/text = "Disabled"
-popup/item_0/id = 0
 popup/item_1/text = "Canvas Items (2D)"
 popup/item_1/id = 1
 popup/item_2/text = "Viewport"
@@ -251,7 +249,6 @@ size_flags_horizontal = 3
 selected = 4
 item_count = 5
 popup/item_0/text = "Ignore"
-popup/item_0/id = 0
 popup/item_1/text = "Keep"
 popup/item_1/id = 1
 popup/item_2/text = "Keep Width"
@@ -275,7 +272,6 @@ size_flags_horizontal = 3
 selected = 0
 item_count = 2
 popup/item_0/text = "Fractional"
-popup/item_0/id = 0
 popup/item_1/text = "Integer"
 popup/item_1/id = 1
 
@@ -296,7 +292,6 @@ size_flags_horizontal = 3
 selected = 0
 item_count = 7
 popup/item_0/text = "Fit to Window"
-popup/item_0/id = 0
 popup/item_1/text = "5:4"
 popup/item_1/id = 1
 popup/item_2/text = "4:3"
@@ -315,6 +310,47 @@ clip_contents = true
 custom_minimum_size = Vector2(5.185, 22)
 layout_mode = 2
 
+[node name="GUIMargin" type="HBoxContainer" parent="Panel/AspectRatioContainer/Panel/CenterContainer/Options"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/AspectRatioContainer/Panel/CenterContainer/Options/GUIMargin"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+text = "GUI Margin"
+
+[node name="HSlider" type="HSlider" parent="Panel/AspectRatioContainer/Panel/CenterContainer/Options/GUIMargin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 100.0
+max_value = 50.0
+
+[node name="Value" type="Label" parent="Panel/AspectRatioContainer/Panel/CenterContainer/Options/GUIMargin"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+
+[node name="WindowScaleFactor" type="HBoxContainer" parent="Panel/AspectRatioContainer/Panel/CenterContainer/Options"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/AspectRatioContainer/Panel/CenterContainer/Options/WindowScaleFactor"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+text = "Window Scale Factor"
+
+[node name="HSlider" type="HSlider" parent="Panel/AspectRatioContainer/Panel/CenterContainer/Options/WindowScaleFactor"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 100.0
+min_value = 0.75
+max_value = 2.0
+step = 0.01
+value = 1.0
+
+[node name="Value" type="Label" parent="Panel/AspectRatioContainer/Panel/CenterContainer/Options/WindowScaleFactor"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100%"
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/AspectRatioContainer/Panel/CenterContainer/Options"]
 layout_mode = 2
 
@@ -327,4 +363,5 @@ text = "salir"
 [connection signal="item_selected" from="Panel/AspectRatioContainer/Panel/CenterContainer/Options/WindowStretchAspect/OptionButton" to="." method="_on_window_stretch_aspect_item_selected"]
 [connection signal="item_selected" from="Panel/AspectRatioContainer/Panel/CenterContainer/Options/WindowStretchScaleMode/OptionButton" to="." method="_on_window_stretch_scale_mode_item_selected"]
 [connection signal="item_selected" from="Panel/AspectRatioContainer/Panel/CenterContainer/Options/GUIMaxAspectRatio/OptionButton" to="." method="_on_gui_aspect_ratio_item_selected"]
+[connection signal="drag_ended" from="Panel/AspectRatioContainer/Panel/CenterContainer/Options/WindowScaleFactor/HSlider" to="." method="_on_h_slider_drag_ended"]
 [connection signal="pressed" from="Panel/AspectRatioContainer/Panel/CenterContainer/Options/HBoxContainer/Button" to="." method="_on_button_pressed"]

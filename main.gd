@@ -6,7 +6,15 @@ extends Node3D
 # Called when the node enters  the scene tree for the first time.
 func _ready() -> void:
 	get_tree().set_auto_accept_quit(false)
-
+	
+	
+	prints("config")
+	var menu = preload("res://escenas/menu_config/menu_config.tscn").instantiate()
+	add_child(menu)
+	menu.queue_free()
+	prints("instancio config")
+	await get_tree().create_timer(3).timeout
+	pass # Replace with function body.
 	## Luego cargar la escena principal
 	#var main_scene = load("res://ruta/a/tu/escena_principal.tscn")
 	#get_tree().change_scene_to(main_scene)

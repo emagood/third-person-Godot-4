@@ -75,7 +75,7 @@ func _ready():
 	## is resized whenever the window size changes. This is because the root Control node
 	## uses a Full Rect anchor, so its size will always be equal to the window size.
 	#update_container()
-
+	resized.connect(_on_resized)
 	update_container.call_deferred()
 
 func aply():
@@ -236,9 +236,23 @@ func _on_window_stretch_aspect_item_selected(index):
 func _on_window_stretch_scale_mode_item_selected(index: int) -> void:
 	get_viewport().content_scale_stretch = index
 	aply()
+#
+#func _on_window_scale_factor_drag_ended(_value_changed):
+	#scale_factor = $"Panel/AspectRatioContainer/Panel/CenterContainer/Options/WindowScaleFactor/HSlider".value
+	#$"Panel/AspectRatioContainer/Panel/CenterContainer/Options/WindowScaleFactor/Value".text = "%d%%" % (scale_factor * 100)
+	#get_viewport().content_scale_factor = scale_factor
+#
 
 
 func _on_button_pressed() -> void:
 	prints(Data.save_(data),"guardo")
 	queue_free()
+	pass # Replace with function body.
+
+
+func _on_h_slider_drag_ended(value_changed: bool) -> void:
+	scale_factor = $"Panel/AspectRatioContainer/Panel/CenterContainer/Options/WindowScaleFactor/HSlider".value
+	$"Panel/AspectRatioContainer/Panel/CenterContainer/Options/WindowScaleFactor/Value".text = "%d%%" % (scale_factor * 100)
+	get_viewport().content_scale_factor = scale_factor
+
 	pass # Replace with function body.
