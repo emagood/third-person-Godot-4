@@ -1,8 +1,8 @@
 [gd_scene load_steps=28 format=3 uid="uid://c0ylx2snq1ry0"]
 
 [ext_resource type="PackedScene" uid="uid://jmt4y8nkctho" path="res://assets/models/CombatPack.glb" id="1_6wwcj"]
-[ext_resource type="Script" path="res://play_pruebba.gd" id="1_yk87x"]
-[ext_resource type="Script" path="res://state.gd" id="3_kwlwo"]
+[ext_resource type="Script" uid="uid://fycdnnw4e24q" path="res://play_pruebba.gd" id="1_yk87x"]
+[ext_resource type="Script" uid="uid://cyd8fecr0oajs" path="res://state.gd" id="3_kwlwo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kwcxb"]
 

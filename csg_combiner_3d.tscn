@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://roox3ck13nvy"]
+
+[ext_resource type="Material" uid="uid://cb6br3g0cy6c1" path="res://assets/materials/Grass.tres" id="1_cypvw"]
+[ext_resource type="Material" uid="uid://c560kh0cq42t2" path="res://assets/materials/Concrete.tres" id="2_0kh1a"]
+[ext_resource type="Material" uid="uid://cotjsbb4imdui" path="res://assets/materials/Wood.tres" id="3_egsp5"]
+[ext_resource type="Texture2D" uid="uid://btrceayvxka1y" path="res://assets/textures/dirt256x256.png" id="4_bcurk"]
+
+[sub_resource type="StandardMaterial3D" id="5"]
+albedo_texture = ExtResource("4_bcurk")
+uv1_triplanar = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D"]
+use_collision = true
+collision_mask = 3
+
+[node name="CSGMesh3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -6, 0)
+size = Vector3(100, 100, 12)
+material = ExtResource("1_cypvw")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 1, 0)
+size = Vector3(20, 2, 32)
+material = ExtResource("2_0kh1a")
+
+[node name="CSGBox2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 4, -12)
+size = Vector3(6, 4, 6)
+material = ExtResource("3_egsp5")
+
+[node name="CSGBox3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 4, -2.86481)
+size = Vector3(6, 4, 14.2704)
+material = ExtResource("3_egsp5")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 16)
+polygon = PackedVector2Array(0, 0, 0, 2, 3, 0)
+depth = 4.0
+material = ExtResource("2_0kh1a")
+
+[node name="CSGBox4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -3.61853, -8.32862)
+operation = 2
+size = Vector3(24, 10, 16)
+material = SubResource("5")

@@ -1,0 +1,103 @@
+[gd_scene load_steps=10 format=3 uid="uid://duugmnauemcc7"]
+
+[ext_resource type="Script" path="res://mainQ.gd" id="1_nohh5"]
+[ext_resource type="PackedScene" uid="uid://roox3ck13nvy" path="res://csg_combiner_3d.tscn" id="2_cha23"]
+[ext_resource type="PackedScene" uid="uid://c0vnqt6uyxaoa" path="res://player/Player.tscn" id="3_7nl8t"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ukb2j"]
+
+[sub_resource type="Sky" id="1"]
+sky_material = SubResource("ProceduralSkyMaterial_ukb2j")
+
+[sub_resource type="Environment" id="2"]
+background_mode = 2
+background_energy_multiplier = 1.77
+sky = SubResource("1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41aqy"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.12549, 0.701961, 0.894118, 0.627451)
+
+[sub_resource type="BoxMesh" id="6"]
+material = SubResource("StandardMaterial3D_41aqy")
+size = Vector3(25, 11, 19)
+
+[sub_resource type="BoxShape3D" id="8"]
+size = Vector3(25.7228, 10, 17.671)
+
+[node name="Main" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.20952, 0)
+script = ExtResource("1_nohh5")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.652085, -0.491636, 0.57713, -0.0626096, 0.793559, 0.605263, -0.755556, 0.358549, -0.548249, 0, 2.70409, 0)
+shadow_enabled = true
+directional_shadow_mode = 0
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.994675, -0.00012963, 0.103061, -0.0102448, 0.994922, 0.100128, -0.102551, -0.10065, 0.989623, 4.86381, 2.09194, 14.9505)
+visible = false
+layers = 2
+shadow_enabled = true
+directional_shadow_mode = 0
+sky_mode = 1
+
+[node name="CSGCombiner3D" parent="." instance=ExtResource("2_cha23")]
+
+[node name="Player" parent="." instance=ExtResource("3_7nl8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.24706, 0, 4.67049)
+collision_mask = 5
+
+[node name="Water" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -5.8162, -8)
+collision_layer = 4
+collision_mask = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Water"]
+mesh = SubResource("6")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water"]
+shape = SubResource("8")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.5
+offset_top = -11.5
+offset_right = 65.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "kjhjkjhkjhjkjjjklkj"
+
+[node name="menu" type="Button" parent="."]
+offset_left = 17.0
+offset_top = 11.0
+offset_right = 152.0
+offset_bottom = 80.0
+text = "menu"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

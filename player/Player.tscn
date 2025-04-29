@@ -159,7 +159,6 @@ blend_point_1/node = SubResource("AnimationNodeAnimation_1kxyj")
 blend_point_1/pos = 1.0
 
 [sub_resource type="AnimationNodeBlendTree" id="36"]
-graph_offset = Vector2(-762.463, -267.686)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_chc45")
 nodes/Animation/position = Vector2(-60, 500)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_42fik")
@@ -278,17 +277,17 @@ shape = SubResource("22")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="GeneralSkeleton" parent="Skin/CombatPack/Armature" index="0"]
-bones/0/position = Vector3(-0.00250972, 0.989878, 0.0042958)
-bones/0/rotation = Quaternion(-0.0330191, -0.0457451, -0.025749, 0.998075)
-bones/1/rotation = Quaternion(0.0324316, 0.0161965, 0.0238822, 0.999057)
-bones/2/rotation = Quaternion(0.0107278, 0.00422254, 0.0139297, 0.999837)
-bones/3/rotation = Quaternion(0.0105473, 0.00448287, 0.0139688, 0.999837)
-bones/4/rotation = Quaternion(0.0501724, -0.00206794, 0.00318001, 0.998733)
-bones/5/rotation = Quaternion(-0.0738113, 0.00707614, -0.00147167, 0.997246)
-bones/7/rotation = Quaternion(0.458104, 0.498689, 0.633994, -0.373499)
-bones/8/rotation = Quaternion(0.125718, 0.804812, -0.567039, -0.122225)
-bones/9/rotation = Quaternion(0.00986678, -0.707037, 0.00986688, 0.707039)
-bones/10/rotation = Quaternion(0.0523162, 0.475749, -0.0128205, 0.87793)
+bones/0/position = Vector3(-0.000249626, 0.989769, 0.000271974)
+bones/0/rotation = Quaternion(-0.0335268, -0.047148, -0.0269918, 0.99796)
+bones/1/rotation = Quaternion(0.0338838, 0.0144484, 0.0241955, 0.999028)
+bones/2/rotation = Quaternion(0.0102231, 0.00311512, 0.0136519, 0.99985)
+bones/3/rotation = Quaternion(0.0100088, 0.00332407, 0.0136824, 0.999851)
+bones/4/rotation = Quaternion(0.0502357, -0.00175183, 0.00484766, 0.998724)
+bones/5/rotation = Quaternion(-0.0739114, 0.00946329, -0.000173455, 0.99722)
+bones/7/rotation = Quaternion(0.455336, 0.50181, 0.63301, -0.374373)
+bones/8/rotation = Quaternion(0.125952, 0.802398, -0.569818, -0.124906)
+bones/9/rotation = Quaternion(0.00958119, -0.707041, 0.009581, 0.707043)
+bones/10/rotation = Quaternion(0.0538759, 0.471903, -0.0110429, 0.879934)
 bones/11/rotation = Quaternion(-0.0420419, -0.0049867, -0.019078, 0.998921)
 bones/12/rotation = Quaternion(-0.152843, 0.812142, -0.0148236, 0.56289)
 bones/13/rotation = Quaternion(0.0400036, -0.0528787, -0.128589, 0.989479)
@@ -313,10 +312,10 @@ bones/27/rotation = Quaternion(0.233868, -0.00344396, -0.0490085, 0.971026)
 bones/28/rotation = Quaternion(0.151258, -7.03633e-05, -0.0155004, 0.988373)
 bones/29/rotation = Quaternion(0.143498, -4.76837e-07, -0.0147052, 0.989541)
 bones/30/rotation = Quaternion(2.98023e-08, 7.45058e-08, 1.49012e-08, 1)
-bones/31/rotation = Quaternion(0.474603, -0.479698, -0.638245, -0.370521)
-bones/32/rotation = Quaternion(-0.147541, 0.828112, -0.496117, 0.215242)
-bones/33/rotation = Quaternion(0.0406374, 0.705942, -0.0406375, 0.705935)
-bones/34/rotation = Quaternion(0.0413122, -0.56894, 0.0354471, 0.820575)
+bones/31/rotation = Quaternion(0.473688, -0.481176, -0.636689, -0.372446)
+bones/32/rotation = Quaternion(-0.149429, 0.827497, -0.498262, 0.211316)
+bones/33/rotation = Quaternion(0.0410209, 0.70592, -0.041021, 0.705912)
+bones/34/rotation = Quaternion(0.0417808, -0.570952, 0.034025, 0.819213)
 bones/35/position = Vector3(0.0300298, 0.0378861, 0.0216749)
 bones/35/rotation = Quaternion(-0.0367837, 0.0144658, 0.00205794, 0.999216)
 bones/36/rotation = Quaternion(-0.121719, -0.819587, 0.0371544, 0.558642)
@@ -341,15 +340,15 @@ bones/51/position = Vector3(-0.0472583, 0.109082, 0.00227083)
 bones/51/rotation = Quaternion(0.228493, 0.00339763, 0.0429811, 0.97259)
 bones/52/rotation = Quaternion(0.151548, 1.11759e-06, 0.0123456, 0.988373)
 bones/53/rotation = Quaternion(0.143773, -1.95205e-06, 0.0117121, 0.989541)
-bones/55/rotation = Quaternion(0.137601, 0.0781488, 0.984496, -0.0756695)
-bones/56/rotation = Quaternion(-0.0381507, 0.993007, -0.111301, 0.0096771)
-bones/57/rotation = Quaternion(-0.0420513, 0.710922, -0.700252, 0.0496888)
+bones/55/rotation = Quaternion(0.136857, 0.0803993, 0.984418, -0.0756817)
+bones/56/rotation = Quaternion(-0.0389339, 0.992895, -0.111775, 0.0122187)
+bones/57/rotation = Quaternion(-0.0419962, 0.711372, -0.699803, 0.0496123)
 bones/58/rotation = Quaternion(-9.59829e-08, 0.999075, 0.0429963, -1.48173e-09)
 bones/59/position = Vector3(-0.00142061, 0.0999745, 0.00175225)
-bones/60/rotation = Quaternion(-0.0918062, -0.0123815, 0.995306, -0.0279996)
-bones/61/rotation = Quaternion(0.0341902, 0.994005, -0.0620162, -0.0833011)
-bones/62/rotation = Quaternion(0.00978579, 0.679889, -0.732706, -0.0282506)
-bones/63/rotation = Quaternion(-8.83446e-08, 0.998101, 0.0615985, -3.46704e-08)
+bones/60/rotation = Quaternion(-0.0917424, -0.00926039, 0.995345, -0.0280224)
+bones/61/rotation = Quaternion(0.0341652, 0.99386, -0.064634, -0.0830512)
+bones/62/rotation = Quaternion(0.0103464, 0.681108, -0.731586, -0.0276988)
+bones/63/rotation = Quaternion(1.81116e-07, 0.998044, 0.0625165, -1.14375e-08)
 bones/64/position = Vector3(0.00141798, 0.0999746, 0.00175011)
 
 [node name="AnimationTree" type="AnimationTree" parent="Skin"]
@@ -502,7 +501,7 @@ offset_top = 249.0
 offset_right = 83.0
 offset_bottom = 265.0
 min_value = 10.0
-max_value = 40.0
+max_value = 60.0
 value = 10.0
 
 [node name="Label2" type="Label" parent="CanvasLayer/HSlider2"]
@@ -515,10 +514,10 @@ text = "speed running"
 
 [node name="HSlider3" type="HSlider" parent="CanvasLayer"]
 visible = false
-offset_left = 4.0
-offset_top = 301.0
-offset_right = 92.0
-offset_bottom = 317.0
+offset_left = 2.0
+offset_top = 302.0
+offset_right = 90.0
+offset_bottom = 318.0
 min_value = 2.0
 max_value = 10.0
 value = 2.0
@@ -533,10 +532,10 @@ text = "2"
 
 [node name="Label4" type="Label" parent="CanvasLayer/HSlider3"]
 layout_mode = 0
-offset_left = -5.0
-offset_top = -34.0
-offset_right = 35.0
-offset_bottom = -11.0
+offset_left = 2.0
+offset_top = -31.0
+offset_right = 42.0
+offset_bottom = -8.0
 text = "max jump x10"
 
 [node name="Button" type="Button" parent="CanvasLayer"]
@@ -545,6 +544,29 @@ offset_top = 91.0
 offset_right = 82.0
 offset_bottom = 115.0
 text = "hack"
+
+[node name="HSlider4" type="HSlider" parent="CanvasLayer"]
+visible = false
+offset_top = 350.0
+offset_right = 76.0
+offset_bottom = 366.0
+max_value = 1.0
+rounded = true
+
+[node name="Label" type="Label" parent="CanvasLayer/HSlider4"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -28.0
+offset_right = 44.0
+offset_bottom = -5.0
+text = "animaciones: true"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 613.0
+offset_top = 1.0
+offset_right = 653.0
+offset_bottom = 24.0
+text = "esc mouse capture"
 
 [connection signal="area_entered" from="DeepWaterDetector" to="." method="_on_DeepWaterDetector_area_entered"]
 [connection signal="area_exited" from="DeepWaterDetector" to="." method="_on_DeepWaterDetector_area_exited"]
@@ -555,5 +577,6 @@ text = "hack"
 [connection signal="value_changed" from="CanvasLayer/HSlider2" to="CanvasLayer" method="_on_h_slider_2_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/HSlider3" to="CanvasLayer" method="_on_h_slider_3_value_changed"]
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer" method="_on_button_pressed"]
+[connection signal="value_changed" from="CanvasLayer/HSlider4" to="CanvasLayer" method="_on_h_slider_4_value_changed"]
 
 [editable path="Skin/CombatPack"]

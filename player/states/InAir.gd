@@ -14,7 +14,7 @@ var _dash_cooldown_remaining: float = 0
 var state_air = false
 var _jump_count: int = 0
 var _jump_cooldown_remaining: float = 0
-
+@export var ray_post = Vector3(0, -2, 0)  # Rayo apuntando hacia abajo
 
 
 
@@ -22,7 +22,7 @@ var _jump_cooldown_remaining: float = 0
 
 func enter():
 	raycast.enabled = true
-	raycast.target_position = Vector3(0, -2, 0)  # Rayo apuntando hacia abajo
+	raycast.target_position = ray_post
 	raycast.force_raycast_update()
 
 	# set the current animation root state to Crouching
@@ -44,6 +44,9 @@ func physics_process(delta):
 	prints("valor de state ", state_air)
 	# set the in air blend position to player's vertical velocity divided by 50, the max. terminal velocity
 	player.anim_tree.set("parameters/InAir/blend_position", player.y_velocity / 50.0)
+	
+	
+	raycast.target_position = ray_post
 	raycast.force_raycast_update()
 	if raycast.is_colliding() and player.is_on_floor():
 		state_air = false

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b3g0q0m70ulno"]
 
 [ext_resource type="PackedScene" uid="uid://c0ylx2snq1ry0" path="res://play_pruebba.tscn" id="1_a0qv5"]
-[ext_resource type="Script" path="res://prueba_anim.gd" id="1_c585m"]
+[ext_resource type="Script" uid="uid://byq8x2y6gxait" path="res://prueba_anim.gd" id="1_c585m"]
 [ext_resource type="PackedScene" uid="uid://nwctp4h0v80q" path="res://play_5.tscn" id="3_ciev7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_diat0"]
