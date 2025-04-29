@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://djtj65qi1mjvu"]
+
+[sub_resource type="GDScript" id="GDScript_8e3no"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	var img = Image.create(1024,1024,false,Image.FORMAT_L8)
+	var noise := FastNoiseLite.new()
+	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
+	noise.fractal_octaves = 10
+	noise.fractal_gain = 0.9
+	noise.frequency = 0.01
+	for x in range(img.get_width()):
+		for y in range(img.get_height()):
+			#x *= 0.01
+			#y *= 0.01
+			var val = noise.get_noise_2d(x,y)
+			val = val > -0.2
+			img.set_pixel(x,y,Color(val,0,0))
+	var tex = ImageTexture.create_from_image(img)
+	$Sprite2D.texture = tex
+"
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3pbf2"]
+frequency = 0.019999999552965164
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_uq4ss"]
+noise = SubResource("FastNoiseLite_3pbf2")
+
+[node name="noise_dev" type="Node2D"]
+script = SubResource("GDScript_8e3no")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("NoiseTexture2D_uq4ss")
+centered = false

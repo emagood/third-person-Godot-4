@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dekfhgg1jaohk"]
+
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="1"]
+
+[node name="touch_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="move" parent="." instance=ExtResource("1")]
+layout_mode = 1
+offset_left = 104.0
+offset_top = 695.0
+offset_right = 404.0
+offset_bottom = 995.0
+metadata/_edit_use_anchors_ = true
+
+[node name="look" parent="." instance=ExtResource("1")]
+layout_mode = 1
+offset_left = 1481.0
+offset_top = 685.0
+offset_right = 1781.0
+offset_bottom = 985.0
+action_left = "look_left"
+action_right = "look_right"
+action_up = "look_up"
+action_down = "look_down"
