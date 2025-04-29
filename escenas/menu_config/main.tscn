@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://6ph6l0oncfj0"]
 
-[ext_resource type="Script" path="res://escenas/menu_config/main.gd" id="1_ggt14"]
+[ext_resource type="Script" uid="uid://dqp2lrg35vijp" path="res://escenas/menu_config/main.gd" id="1_ggt14"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vvbdh"]
 draw_center = false

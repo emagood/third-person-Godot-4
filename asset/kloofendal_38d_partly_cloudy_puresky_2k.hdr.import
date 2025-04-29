@@ -1,0 +1,19 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c2ulifx2it5s0"
+path.astc="res://.godot/imported/kloofendal_38d_partly_cloudy_puresky_2k.hdr-9b277e5c445f87590a7346557b30381c.astc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://asset/kloofendal_38d_partly_cloudy_puresky_2k.hdr"
+dest_files=["res://.godot/imported/kloofendal_38d_partly_cloudy_puresky_2k.hdr-9b277e5c445f87590a7346557b30381c.astc.ctex"]
+
+[params]
+
+dummy_value_ignore_me=0
