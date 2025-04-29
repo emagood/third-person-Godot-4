@@ -58,3 +58,7 @@ func has_movement():
 	# the player is fully stopped only if both the movement vector and the velocity
 	# vectors are approximately zero. otherwise it means they have movement
 	return controls.get_movement_vector() != Vector2.ZERO || !velocity.is_equal_approx(Vector3.ZERO)
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.

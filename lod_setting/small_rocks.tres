@@ -1,0 +1,8 @@
+[gd_resource type="MGrassLodSetting" format=3 uid="uid://dx01srhck8s1y"]
+
+[resource]
+divide = 2
+grass_in_cell = 6
+force_lod_count = 0
+rand_rot_end = Vector3(360, 360, 360)
+uniform_rand_scale_end = 2.0

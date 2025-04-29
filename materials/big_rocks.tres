@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://b1pmhb2y8twe0"]
+
+[ext_resource type="Shader" path="res://materials/big_rocks.gdshader" id="1"]
+[ext_resource type="Texture2D" uid="uid://cd3nkjd17tk5u" path="res://asset/big_rock/lambert3_baseColor.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dvqa7waupojkw" path="res://asset/Rock035_nc.jpg" id="3"]
+
+[resource]
+render_priority = 0
+next_pass = null
+shader = ExtResource("1")
+shader_parameter/rock_color = Color(0.381897, 0.404725, 0.381105, 1)
+shader_parameter/rock_tex = ExtResource("3")
+shader_parameter/rock_orignal_color = ExtResource("2")

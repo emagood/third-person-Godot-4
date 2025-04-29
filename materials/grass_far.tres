@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dwbssuq5ts2fs"]
+
+[ext_resource type="Shader" path="res://materials/far_y_bilboard.gdshader" id="1"]
+[ext_resource type="Texture2D" uid="uid://bjm5mlwlmuw2" path="res://asset/green_baseColor.png" id="2"]
+
+[resource]
+render_priority = 0
+next_pass = null
+shader = ExtResource("1")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor = 0.21
+shader_parameter/uv_scale = Vector2(1, 1.08)
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/color_tex = ExtResource("2")

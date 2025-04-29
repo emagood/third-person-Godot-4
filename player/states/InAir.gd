@@ -9,13 +9,22 @@ extends PlayerState
 @export var air_acceleration: float = 10
 @export var cam_follow_speed: float = 8
 @export var turn_speed: float = 10
-
+@export var raycast:RayCast3D = null
 var _dash_cooldown_remaining: float = 0
-
+var state_air = false
 var _jump_count: int = 0
 var _jump_cooldown_remaining: float = 0
 
+
+
+
+
+
 func enter():
+	raycast.enabled = true
+	raycast.target_position = Vector3(0, -2, 0)  # Rayo apuntando hacia abajo
+	raycast.force_raycast_update()
+
 	# set the current animation root state to Crouching
 	player.anim_tree.set("parameters/RootState/transition_request", "in-air")
 
@@ -32,11 +41,23 @@ func process(delta):
 		state_machine.transition_to("InAir/Dashing")
 
 func physics_process(delta):
+	prints("valor de state ", state_air)
 	# set the in air blend position to player's vertical velocity divided by 50, the max. terminal velocity
 	player.anim_tree.set("parameters/InAir/blend_position", player.y_velocity / 50.0)
-
+	raycast.force_raycast_update()
+	if raycast.is_colliding() and player.is_on_floor():
+		state_air = false
+		prints("coliciono2 esta en suelo ")
+	else:
+		state_air = true
+		prints(" esta en el aire ")
 	# if the player is checked the floor, transition to the OnGround state
-	if player.is_on_floor():
+	#if player.is_on_floor():
+
+	
+	if !state_air :
+
+		print("Colisionó state air : ",state_air)
 		# if currently in the Falling state, also reset jump counters
 		var state_name: String = "%s" % [state_machine._state.get_path()]
 		if state_name.ends_with("Falling"):
@@ -54,7 +75,7 @@ func physics_process(delta):
 func can_jump():
 	# if the player is checked the floor, or if the current jump count is less than the max jump count and the jump
 	# cooldown timer is 0 or less the player can jump
-	return player.is_on_floor() || (_jump_count < max_jumps && _jump_cooldown_remaining <= 0)
+	return !state_air || (_jump_count < max_jumps && _jump_cooldown_remaining <= 0)
 
 func accept_jump():
 	# increase the jump count and reset the jump cooldown timer

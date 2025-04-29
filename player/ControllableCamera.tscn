@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://tykcwr43cbsh"]
 
-[ext_resource type="Script" path="res://player/ControllableCamera.gd" id="1"]
+[ext_resource type="Script" uid="uid://br7qy21fcor21" path="res://player/ControllableCamera.gd" id="1"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yingw"]
 radius = 0.7

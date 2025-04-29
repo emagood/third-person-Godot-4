@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://e2bccij4j7ud"]
 
-[ext_resource type="Script" path="res://player/Controls.gd" id="1"]
+[ext_resource type="Script" uid="uid://btlyg2ycvhoyf" path="res://player/Controls.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dka7avqvntd24" path="res://ui/VirtualThumbStick.tscn" id="2"]
-[ext_resource type="Script" path="res://player/MobileControls.gd" id="3"]
+[ext_resource type="Script" uid="uid://c68dbndvpcrut" path="res://player/MobileControls.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://b7pko6wiso3k5" path="res://ui/VirtualButton.tscn" id="4"]
 [ext_resource type="Texture2D" uid="uid://dbnkrhpok1qpe" path="res://assets/icons/icon-swim-up.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://bo2lfwsaijgdq" path="res://assets/icons/icon-surge.png" id="6"]
