@@ -3,7 +3,8 @@ A third person player controller with touchscreen support for Godot 4.
 
 
  ![Screenshot borrar](https://github.com/emagood/third-person-Godot-4/blob/main/captura/Capturamterrain%20new%202.PNG)
-
+ # the plugin is M terrain : https://github.com/mohsenph69/Godot-MTerrain-plugin
+ # aviso : The original project is by selgesel ,  Godot 4 - Third Person Player Controller
 > **Note:** This project is for Godot 4 only. For the Godot 3 version please see [selgesel/godot3-third-person-controller](https://github.com/selgesel/godot3-third-person-controller)
 
 This is a complementary code repository for my [YouTube video series](https://www.youtube.com/playlist?list=PLlT0CCZ8Yw0mcxG_D_sSA-Imnc5tiR4tx).
@@ -56,8 +57,10 @@ Each button displays an icon that (hopefully) explains the action that they perf
 <<<<<<< HEAD
 =======
 ## Changes
-
+![Screenshot borrar](https://github.com/emagood/third-person-Godot-4/blob/main/captura/Capturamterrain%20new.PNG)
 Changes to touch buttons
+
+Added a hack menu 
 
 Fixed the broken scene and player scenes in the Godot 4.3 version
 
