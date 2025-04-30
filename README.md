@@ -1,6 +1,9 @@
 # Godot 4 - Third Person Player Controller
 A third person player controller with touchscreen support for Godot 4.
 
+
+ ![Screenshot borrar](https://github.com/emagood/third-person-Godot-4/blob/main/captura/Capturamterrain%20new%202.PNG)
+
 > **Note:** This project is for Godot 4 only. For the Godot 3 version please see [selgesel/godot3-third-person-controller](https://github.com/selgesel/godot3-third-person-controller)
 
 This is a complementary code repository for my [YouTube video series](https://www.youtube.com/playlist?list=PLlT0CCZ8Yw0mcxG_D_sSA-Imnc5tiR4tx).
